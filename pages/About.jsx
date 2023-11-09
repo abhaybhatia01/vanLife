@@ -16,7 +16,7 @@ export default function About() {
                 <p>Our team is full of vanlife enthusiasts who know firsthand the magic of touring the world on 4 wheels.</p>
             </div>
             <div className="about-page-cta">
-                <h2>Your destination is waiting... <br />Your van is ready.</h2>
+                <h2>Your van is ready. <br />Your destination is waiting...</h2>
                 <Link className="link-button" to="/vans">Explore our vans</Link>
             </div>
         </div>

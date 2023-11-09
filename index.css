@@ -35,6 +35,7 @@ header {
     align-items: center;
     padding-block: 10px;
     background-color: #FF8C38;
+    padding-inline: 0.7rem;
 }
 
 header .site-logo {
@@ -42,14 +43,15 @@ header .site-logo {
     margin-right: auto;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 19px;
 }
 
 header a {
+    font-size: small;
     text-decoration: none;
     color: #4D4D4D;
     font-weight: 600;
-    padding: 5px 15px;
+    padding: 5px 10px;
 }
 
 header a:hover {
