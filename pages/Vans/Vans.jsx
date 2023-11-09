@@ -46,44 +46,46 @@ export default function Vans() {
             return prevParams
         })
     }
-    
+
     if (error) {
         return <h1>There was an error: {error.message}</h1>
     }
 
     return (
         <div className="van-list-container">
-            <h1>Explore our van options</h1>
-            <div className="van-list-filter-buttons">
-                <button
-                    onClick={() => handleFilterChange("type", "simple")}
-                    className={
-                        `van-type simple 
-                        ${typeFilter === "simple" ? "selected" : ""}`
-                    }
-                >Simple</button>
-                <button
-                    onClick={() => handleFilterChange("type", "luxury")}
-                    className={
-                        `van-type luxury 
-                        ${typeFilter === "luxury" ? "selected" : ""}`
-                    }
-                >Luxury</button>
-                <button
-                    onClick={() => handleFilterChange("type", "rugged")}
-                    className={
-                        `van-type rugged 
-                        ${typeFilter === "rugged" ? "selected" : ""}`
-                    }
-                >Rugged</button>
-
-                {typeFilter ? (
+            <div className="van-list-hero">
+                <h1>Explore our van options</h1>
+                <div className="van-list-filter-buttons">
                     <button
-                        onClick={() => handleFilterChange("type", null)}
-                        className="van-type clear-filters"
-                    >Clear filter</button>
-                ) : null}
+                        onClick={() => handleFilterChange("type", "simple")}
+                        className={
+                            `van-type simple 
+                            ${typeFilter === "simple" ? "selected" : ""}`
+                        }
+                    >Simple</button>
+                    <button
+                        onClick={() => handleFilterChange("type", "luxury")}
+                        className={
+                            `van-type luxury 
+                            ${typeFilter === "luxury" ? "selected" : ""}`
+                        }
+                    >Luxury</button>
+                    <button
+                        onClick={() => handleFilterChange("type", "rugged")}
+                        className={
+                            `van-type rugged 
+                            ${typeFilter === "rugged" ? "selected" : ""}`
+                        }
+                    >Rugged</button>
 
+                    {typeFilter ? (
+                        <button
+                            onClick={() => handleFilterChange("type", null)}
+                            className="van-type clear-filters"
+                        >Clear filter</button>
+                    ) : null}
+
+                </div>
             </div>
             <div className="van-list">
                 {vanElements}
