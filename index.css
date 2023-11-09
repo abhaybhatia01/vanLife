@@ -9,6 +9,11 @@ html, body {
     font-family: "Inter", sans-serif;
 }
 
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -29,6 +34,7 @@ header {
     display: flex;
     align-items: center;
     padding-block: 10px;
+    background-color: #FF8C38;
 }
 
 header .site-logo {
@@ -43,7 +49,7 @@ header a {
     text-decoration: none;
     color: #4D4D4D;
     font-weight: 600;
-    padding: 5px 20px;
+    padding: 5px 15px;
 }
 
 header a:hover {
@@ -51,8 +57,26 @@ header a:hover {
     text-decoration: underline;
 }
 
+header button {
+    cursor: pointer;
+}
+
+header .login-icon {
+    height: 18px;
+    width: 18px;
+}
+
+header .login-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
 main {
-    margin-bottom: 84px;
+    /* margin-bottom: 84px; */
 }
 
 footer {
@@ -84,7 +108,6 @@ footer {
     display: block;
     color: black;
     text-decoration: none;
-    margin-top: 60px;
     margin-left: 26px;
 }
 
@@ -104,14 +127,17 @@ footer {
     -o-background-size: cover;
     background-size: cover;
     min-height: 350px;
-    color: white;
+    color: rgb(219, 219, 219);
     padding: 45px 23px;
 }
+
 
 .home-container h1 {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 42px;
+    color :pink;
+
 }
 
 .home-container p {
@@ -126,7 +152,9 @@ footer {
     border: none;
     width: 100%;
     margin-top: 27px;
+    
     padding-block: .75rem;
+    padding-inline: .75rem;
     color: white;
     font-weight: 700;
     border-radius: 5px;
@@ -137,11 +165,75 @@ footer {
 .home-container a:hover {
     transform: translate(1px, 1px);
 }
+@media (width>600px) {
+    .home-container {
+        padding-inline: 3rem;
+    }
+    .home-container h1 {
+        width:480px;
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 42px;
+    }
+    .home-p-a-conatiner{
+        display: flex;
+        /* flex-flow: row nowrap; */
+        padding-top: 80px;
+    }
+    .home-container a{
+        /* width: calc(max-content + 10px); */
+        margin:1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
+@media (width>946px) {
+    .home-container {
+        width:946px;
+        margin: auto;
+        margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    }
+}
 
 /*** ABOUT PAGE ***/
+.about-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
 .about-hero-image {
-    max-width: 100%;
+    grid-area: 1 / 1 / 2 / 2; 
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+.about-page-container .about-heading {
+    grid-area: 2 / 1 / 3 / 2; 
+}
+
+.about-page-container h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.3rem; 
+    background: #FFCC8D;
+    background: -webkit-linear-gradient(#979797, #ffe4c3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+    padding-inline: 1rem;
 }
 
 .about-page-content {
@@ -150,12 +242,11 @@ footer {
     margin-bottom: 55px;
 }
 
-.about-page-content h1 {
-    line-height: 38px;
-}
-
 .about-page-content p {
     line-height: 22px;
+    text-align:justify;
+    color: #8d8d8d;
+
 }
 
 .about-page-cta {
@@ -170,6 +261,7 @@ footer {
 .about-page-cta h2 {
     margin: 0;
     padding-block: 37px;
+    
 }
 
 .about-page-cta .link-button {
@@ -178,10 +270,43 @@ footer {
     border-radius: 10px;
 }
 
+@media (width>759px) {
+    .about-hero {
+        place-items: center;
+        grid-template-rows: 1fr 1fr;
+    }
+    .about-hero-image {
+        grid-area: 1 / 1 / 3 / 2; 
+    }
+    .about-page-container .about-heading  {
+        grid-area: 1 / 1 / 3 / 2; 
+    }
+    .about-page-content{
+        margin: auto;
+        width: 700px;
+    }
+    .about-page-container h1{
+        font-size: 2rem; 
+
+    }
+    .about-page-cta{
+        width: 700px;
+        margin: auto;
+    }
+}
 
 /*** VAN PAGES ***/
 .van-list-container {
     padding-inline: 23px
+}
+
+.van-list-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.van-list-filter-buttons > a {
+    margin-right: 15px;
 }
 
 .van-list {
@@ -261,7 +386,7 @@ i[class*='van-type-'] {
 }
 
 .van-detail-container {
-    padding: 27px;
+    padding-inline: 27px;
 }
 
 .van-detail-container .back-button {
@@ -315,6 +440,7 @@ i[class*='van-type-'] {
 
 .host-nav {
     display: flex;
+    margin-bottom: 30px;
 }
 
 .host-nav a {
@@ -445,4 +571,69 @@ i[class*='van-type-'] {
 .host-van-detail-image {
     height: 100px;
     border-radius: 5px;
+}
+
+.not-found-container {
+    padding-inline: 26px;
+}
+
+.not-found-container .link-button {
+    width: 100%;
+    background-color: #161616;
+    color: white;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 27px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;    
+}
+
+.login-form > input {
+    border: 1px solid rgba(209, 213, 219);
+    height: 40px;
+    text-indent: 10px;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    font-weight: 400;
+}
+
+.login-form > input:focus {
+    outline: none;
+}
+
+.login-form > input:first-of-type {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.login-form > input:last-of-type {
+    border-radius: 0px 0px 6px 6px;
+    border-top: none;
+}
+
+.login-form > button {
+    background-color: #FF8C38;
+    border: none;
+    border-radius: 6px;
+    height: 55px;
+    margin-top: 22px;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.login-form > button:disabled {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
+}
+
+.red {
+    color: #cc0000;
 }
