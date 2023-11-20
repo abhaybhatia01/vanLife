@@ -80,6 +80,7 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'center',
         minHeight: '60vh',
+        backgroundColor: '#cee4ff'
     },
     myVans: {
         maxWidth: "300px",

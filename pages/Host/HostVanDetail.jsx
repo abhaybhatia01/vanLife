@@ -11,14 +11,40 @@ export async function loader({ params, request }) {
 export default function HostVanDetail() {
     const currentVan = useLoaderData()
 
+    // const activeStyles = {
+    //     fontWeight: "bold",
+    //     textDecoration: "underline",
+    //     color: "#161616"
+    // }
+
+
+
     const activeStyles = {
         fontWeight: "bold",
         textDecoration: "underline",
-        color: "#161616"
+        color: "#161616",
+        backgroundColor: "#cee4ff",
+        borderTopRightRadius: '5px',
+        borderTopLeftRadius: "5px",
+        transition: "all 0.3s ease"
+    }
+    const hostNavButton = {
+        fontWeight: "normal",
+        backgroundColor: "#EDF5FF",
+        borderTopRightRadius: '5px',
+        borderTopLeftRadius: "5px",
+        transition: "all 0.3s ease",
+    }
+    const hostVanSetailsSection = {
+        minHeight: '60vh',
+        backgroundColor: '#cee4ff',
+        paddingTop: '1.2rem',
+        paddingBottom: "1.2rem",
+        transition: "all 0.3s ease"
     }
 
     return (
-        <section>
+        <section style={hostVanSetailsSection}>
             <Link
                 to=".."
                 relative="path"
@@ -43,19 +69,19 @@ export default function HostVanDetail() {
                     <NavLink
                         to="."
                         end
-                        style={({ isActive }) => isActive ? activeStyles : null}
+                        style={({ isActive }) => isActive ? activeStyles : hostNavButton}
                     >
                         Details
                     </NavLink>
                     <NavLink
                         to="pricing"
-                        style={({ isActive }) => isActive ? activeStyles : null}
+                        style={({ isActive }) => isActive ? activeStyles : hostNavButton}
                     >
                         Pricing
                     </NavLink>
                     <NavLink
                         to="photos"
-                        style={({ isActive }) => isActive ? activeStyles : null}
+                        style={({ isActive }) => isActive ? activeStyles : hostNavButton}
                     >
                         Photos
                     </NavLink>

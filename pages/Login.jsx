@@ -51,7 +51,6 @@ export default function Login() {
     return (
         <div className="login-container">
             <h1>Sign in to your account</h1>
-
             {
                 localStorage.getItem("loggedin") ?
                     <button style={logoutButton} onClick={fakeLogOut}>Log Out </button> :
@@ -73,11 +72,13 @@ export default function Login() {
                     name="email"
                     type="email"
                     placeholder="Email address"
+                    autoComplete="true"
                 />
                 <input
                     name="password"
                     type="password"
                     placeholder="Password"
+                    autoComplete="true"
                 />
                 <button
                     disabled={navigation.state === "submitting"}

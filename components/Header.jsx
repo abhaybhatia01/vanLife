@@ -31,12 +31,15 @@ export default function Header() {
                 >
                     Vans
                 </NavLink>
-                <Link to="login" className="login-link">
+                <NavLink to="login" className="login-link"
+                    style={({ isActive }) => isActive ? activeStyles : null}
+                >
+
                     <div
                         // src="../assets/images/avatar-icon.png"
                         className="login-icon"
                     > 🧑</div>
-                </Link>
+                </NavLink>
 
             </nav>
         </header>

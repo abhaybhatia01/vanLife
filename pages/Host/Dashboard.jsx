@@ -49,8 +49,9 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
-        height: '80vh',
+        justifyContent: 'flex-start',
+        minHeight: '60vh',
+        backgroundColor: '#cee4ff'
     },
     card: {
         backgroundColor: '#fff',
@@ -61,20 +62,20 @@ const styles = {
         margin: '20px',
     },
     title: {
-        fontSize: '2rem',
+        fontSize: '1.5rem',
         fontWeight: 'bold',
         marginBottom: '10px',
     },
     subtitle: {
-        fontSize: '1.5rem',
+        fontSize: '1rem',
         marginBottom: '5px',
     },
     text: {
-        fontSize: '1rem',
+        fontSize: '0.8rem',
         marginBottom: '5px',
     },
     bio: {
-        fontSize: '1rem',
+        fontSize: '0.8rem',
         marginTop: '10px',
     },
     button: {

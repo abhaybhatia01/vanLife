@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, useParams, useLocation, useLoaderData } from "react-router-dom"
 import { getVans } from "../../api"
-
+import { NavLink } from "react-router-dom"
 export function loader({ params }) {
     return getVans(params.id)
 }
@@ -30,7 +30,14 @@ export default function VanDetail() {
                     <h2>{van.name}</h2>
                     <p className="van-price"><span>${van.price}</span>/day</p>
                     <p>{van.description}</p>
-                    <button className="link-button">Rent this van</button>
+                    {/* <button className="link-button">Rent this van</button> */}
+                    <NavLink
+                        className="link-button"
+                        to="/host/vans"
+                        style={({ isActive }) => isActive ? activeStyles : null}
+                    >
+                        see your vans
+                    </NavLink>
                 </div>
             </div>
 
