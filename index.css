@@ -139,22 +139,30 @@ footer {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 350px;
+    min-height: 70vh;
     color: rgb(219, 219, 219);
     padding: 45px 23px;
 }
 
-
+.button-container{
+    /* position: absolute; */
+    
+    /* bottom: 0; */
+}
 .home-container h1 {
     font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 42px;
+    font-size: 2rem;
+    line-height: 0;
     color :pink;
 
 }
 
 .home-container p {
-    line-height: 24px;
+    margin-top: 1rem;
+    opacity: 0.7;
+    text-align: center;
+    /* line-height: 24px; */
+    font-size: 0.7rem;
 }
 
 .home-container a {
@@ -181,9 +189,9 @@ footer {
 @media (min-width:600px) {
     .home-container {
         padding-inline: 3rem;
+        /* min-height: 60vh; */
     }
     .home-container h1 {
-        width:480px;
         font-weight: 700;
         font-size: 2.25rem;
         line-height: 42px;
@@ -192,6 +200,7 @@ footer {
         display: flex;
         /* flex-flow: row nowrap; */
         padding-top: 80px;
+        
     }
     .home-container a{
         /* width: calc(max-content + 10px); */
@@ -284,6 +293,14 @@ footer {
     color: white;
     border-radius: 10px;
 }
+.home-container h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: white;
+}
+
 
 @media (width>759px) {
     .about-hero {
@@ -791,6 +808,7 @@ header .site-logo {
     font-weight: 900;
     font-size: 19px;
     padding-bottom: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header{
     flex-direction: column;
